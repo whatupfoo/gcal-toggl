@@ -2,6 +2,8 @@
 
 #### This is a simple python script that imports all the events from your Google calendar to Toggl in the date range that you specified.
 
+![overview](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%2011.png)
+
 ## Let's get to it!
 
 ## Step 1: Enable your gCal API & Install Google Client Library.
@@ -42,10 +44,14 @@ Run script with the following:
 python toggl_gcal_GH.py
 ```
 
+## Step 5: Authenticate and enter date range.
+
 Enter the start date you want to import to Toggl, as well as the end date.
 (Since timestamps stuff is not perfect, I'd go with more than 1 day to avoid duplicated events)
 
-## Step 5: *Voila!*
+Your browser will pop up and prompt you to authenticate your Google account.
+
+## Step 6: *Voila!*
 
 A healthy response looks something like this, but with multiple JSON objects since the script makes batch API calls:
 ![healthy_response](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%2010.31.25%20PM.png)
