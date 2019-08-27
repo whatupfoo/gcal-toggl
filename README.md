@@ -4,7 +4,7 @@
 
 ## Let's get to it!
 
-## Step 1: Enable your gCal API & Install Google Client Library
+## Step 1: Enable your gCal API & Install Google Client Library.
 
 Basically, **step 1** and **step 2** [here](https://developers.google.com/calendar/quickstart/python).
 
@@ -12,7 +12,7 @@ Make sure you have python 3.4 and above.
 
 Create a folder and have the `configurations.json` file in the same working directory as the python script.
 
-## Step 2: Get your Toggl API token
+## Step 2: Get your Toggl API token.
 
 ![profile_settings_toggl](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%209.01.00%20PM.png)
 
@@ -26,17 +26,17 @@ Scroll all the way down for your Toggl API token.
 
 ![Replace_token](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%209.04.54%20PM.png)
 
-Make sure you don't remove the quotations and don't forget to save the file.
+Replace `API_TOKEN` with your Toggl token and save file.
 
 ## Step 4: Run script.
 
-Navigate to the working working directory where the script and `configurations.json` live.
+Navigate to the working working directory in your terminal where the script and `configurations.json` live.
 
 ```
 cd working_directory
 ```
 
-Run script.
+Run script with the following:
 
 ```
 python toggl_gcal_GH.py
@@ -56,3 +56,7 @@ Refresh Toggl and you should see the events populated!
 1. Add toggl tags, such as "Meetings", "Internal tasks" and "Billable" etc.
 2. Filter for specific events, such as events you said 'YES' to. Or filter out events you don't want to track like OOO events etc.
 3. gCal API returns with RFC3339 timestamps with time zone offset; still not perfect in the script when it comes to entering the same start and end dates.
+
+## Sources
+1. [Toggl API Documentation](https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md)
+2. [API requests to gCal with Python](https://developers.google.com/calendar/quickstart/python)
