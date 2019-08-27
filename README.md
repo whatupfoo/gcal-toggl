@@ -1,11 +1,8 @@
 # gcal-toggl
 
-#### This is a simple python script that imports all the events on your Google calendar to Toggl in a date range that you specify.
+#### This is a simple python script that imports all the events from your Google calendar to Toggl in the date range that you specified.
 
-## What this script can't do (yet):
-1. Add toggl tags
-2. Filter for specific events, such as events you said 'YES' to. Or filter out events you don't want to track like OOO events etc.
-3. gCal returns with RFC3339 timestamps with time zone offset; still not perfect in the script when it comes to pulling in events in the same day.
+## Let's get to it!
 
 ## Step 1: Enable your gCal API & Install Google Client Library
 
@@ -17,15 +14,19 @@ Create a folder and have the `configurations.json` file in the same working dire
 
 ## Step 2: Get your Toggl API token
 
-
+![profile_settings_toggl](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%209.01.00%20PM.png)
 
 Hover over to the left sidebar and select **Profile Settings**.
 
-Scroll all the way down for your Toggl API token. Don't forget to save the file.
+![toggl_api_token](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%209.02.11%20PM.png)
 
-## Step 3: Replace the Toggl token with yours in the script.
+Scroll all the way down for your Toggl API token. 
 
+## Step 3: Paste your Toggl token in the script.
 
+![Replace_token](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%209.04.54%20PM.png)
+
+Make sure you don't remove the quotations and don't forget to save the file.
 
 ## Step 4: Run script.
 
@@ -46,4 +47,12 @@ Enter the start date you want to import to Toggl, as well as the end date.
 
 ## Step 5: *Voila!*
 
+A healthy response looks something like this, but with multiple JSON objects since the script makes batch API calls:
+![healthy_response](https://github.com/rwnfoo/gcal-toggl/blob/master/images/Screen%20Shot%202019-08-26%20at%2010.31.25%20PM.png)
+
 Refresh Toggl and you should see the events populated!
+
+## What this script can't do (yet):
+1. Add toggl tags, such as "Meetings", "Internal tasks" and "Billable" etc.
+2. Filter for specific events, such as events you said 'YES' to. Or filter out events you don't want to track like OOO events etc.
+3. gCal API returns with RFC3339 timestamps with time zone offset; still not perfect in the script when it comes to entering the same start and end dates.
