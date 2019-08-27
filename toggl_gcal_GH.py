@@ -16,6 +16,9 @@ def gcal_events():
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
+    Date_Start = input("Input the start date you want to track: YYYY-MM-DD\n")
+    Date_End = input("Input the end date: YYYY-MM-DD\n")
+
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
             creds = pickle.load(token)
@@ -34,8 +37,8 @@ def gcal_events():
     service = build('calendar', 'v3', credentials=creds)
 
     # EDIT THE TIMES YOU WANT TO TRACK HERE
-    DATETIME_START_LOG = '2019-08-26T00:00:00+00:00'
-    DATETIME_END_LOG = '2019-08-27T00:00:00+00:00'
+    DATETIME_START_LOG = Date_Start+'T00:00:01+00:00'
+    DATETIME_END_LOG = Date_End+'T23:59:59+00:00'
 
     # Google Calendar API call
     # Parameters you can include: maxResults=3,
@@ -45,7 +48,7 @@ def gcal_events():
     events = events_result.get('items', [])
 
     if not events:
-        print('No upcoming events found.')
+        print('No events found.')
     for event in events:
         event_name = event['summary']
         start = event['start'].get('dateTime', event['start'].get('date'))
