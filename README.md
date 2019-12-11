@@ -8,11 +8,16 @@
 
 ## Step 1: Enable your gCal API & Install Google Client Library.
 
-Basically, **step 1** and **step 2** [here](https://developers.google.com/calendar/quickstart/python).
+Click on "Enable Google Calendar API" on **step 1** [here](https://developers.google.com/calendar/quickstart/python) to download the `credentials.json` file.
 
-Make sure you have python 3.4 and above.
+Install Google Client Library:
+```
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
+*Note:* Make sure you have python 3.4 and above.
+See [here](https://github.com/googleapis/google-api-python-client) for alternative installation options.
 
-Create a folder and have the `configurations.json` file in the same working directory as the python script.
+Create a folder and have the `credentials.json` file in the same working directory as the python script.
 
 ## Step 2: Get your Toggl API token.
 
