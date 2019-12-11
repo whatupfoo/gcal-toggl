@@ -37,7 +37,7 @@ Replace `API_TOKEN` with your Toggl token and save file.
 
 ## Step 4: Run script.
 
-Navigate to the working working directory in your terminal where the script and `configurations.json` live.
+Navigate to the working working directory in your terminal where the script and `credentials.json` live.
 
 ```
 cd working_directory
